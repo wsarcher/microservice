@@ -28,7 +28,7 @@ zuul:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://192.168.80.230:8761/eureka/
     
 # Define settings for Single-Sign-On with OAuth2; this means that we need to relay the OAuth token 
 # to the subsequent resources that are proxied by the Zuul api gateway.
@@ -83,11 +83,11 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://192.168.59.103:8761/eureka/
+      defaultZone: http://192.168.80.230:8761/eureka/
       
 # The OAuth2 server definition that would be used to send the authorization requests to
 authserver:
-    hostname: 192.168.59.103
+    hostname: 192.168.80.230
     port: 8899
     contextPath: userauth
     
