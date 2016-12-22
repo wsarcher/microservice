@@ -4,7 +4,7 @@ server:
 
 # The OAuth2 server definition that would be used to send the authorization requests to
 authserver:
-    hostname: localhost
+    hostname: 192.168.80.230
     port: 8899
     contextPath: userauth
     
