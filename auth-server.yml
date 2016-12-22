@@ -7,7 +7,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://192.168.80.230:8761/eureka/
 
 security:
   user:
@@ -39,4 +39,4 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://192.168.59.103:8761/eureka/
+      defaultZone: http://192.168.80.230:8761/eureka/
