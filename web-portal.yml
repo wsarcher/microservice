@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8787
   
 eureka:
   client:
@@ -15,11 +15,15 @@ eureka:
 # Register our microservices to Eureka using hostnames in a Docker environment will not work, they will all get 
 # one and the same hostname. Instead we configure them to use its IP address during registration with Eureka.
   instance:
+    non-secure-port: 8787
     preferIpAddress: true
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://192.168.80.230:8761/eureka/
+
 # Define the port where the web portal server would be running. This could always be port 8080
 # since each docker container has it's own IP
 server:
-  port: 8090  
+  port: 8787
