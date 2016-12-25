@@ -24,6 +24,11 @@ zuul:
       path: /api/loggedinuser/**
       stripPrefix: true
       url: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
 # Define the Eureka server that handles service registration
 eureka:
   client:
