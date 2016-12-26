@@ -11,7 +11,8 @@ eureka:
 
 security:
   user:
-    password: password      
+    password: password
+  enable-csrf: false
 
 # Datasource and JPA configuration to be used for storing the OAuth authorization details 
 # and token store
@@ -28,10 +29,6 @@ spring:
     hibernate:
       ddl-auto: create
 
----
-
-spring:
-  profiles: docker
 eureka:
 # Register our microservices to Eureka using hostnames in a Docker environment will not work, they will all get 
 # one and the same hostname. Instead we configure them to use its IP address during registration with Eureka.
